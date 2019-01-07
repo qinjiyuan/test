@@ -7,24 +7,32 @@ package Utils;
 public class ArraySel {
 	private long[] a;
 	private int nElems;
-	
+	/**
+	 * 初始化
+	 */
 	public ArraySel(int max) {
 		a= new long[max];
 		nElems = 0;
 	}
-	
+	/**
+	 * 插入数组
+	 */
 	public void insert(long value) {
 		a[nElems] =  value;
 		nElems ++ ;
 	}
-	
+	/**
+	 * 显示当前状态下的数组情况
+	 */
 	public void display() {
 		for(int j =0 ; j<nElems ; j++) {
 			System.out.print(a[j] + "  ");
 		}
 		System.out.println();
 	}
-	
+	/**
+	 * 排序过程
+	 */
 	public void selectionSort() {
 		
 		int out,in;
@@ -39,7 +47,9 @@ public class ArraySel {
 			 }
 		
 	}
-	
+	/**
+	 * 排序过程
+	 */
 	public void sortSort() {
 		 int out;
 		 for(out =0 ; out < nElems-1 ; out++) {
@@ -55,9 +65,6 @@ public class ArraySel {
 			 }
 			a[location] = a[nElems-out-1];
 			a[nElems-out-1] = temp;
-			
-			
-			
 		 }
 	}
 	
@@ -70,6 +77,7 @@ public class ArraySel {
 		arr.insert(77);
 		arr.insert(66);
 		arr.insert(11);
+		arr.insert(55);
 		arr.insert(44);
 		arr.insert(33);
 		arr.insert(22);
